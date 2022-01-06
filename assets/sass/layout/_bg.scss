@@ -46,7 +46,7 @@
 				'transform #{_duration(article)} ease-in-out',
 				'filter #{_duration(article)} ease-in-out'
 			));
-			background-image:		url('../../images/bg.jpg');
+			background-image:		url('../../images/bg2.jpeg');
 			background-position:	center;
 			background-size:		cover;
 			background-repeat:		no-repeat;
@@ -55,7 +55,7 @@
 
 		body.is-article-visible & {
 			&:after {
-				@include vendor('transform', 'scale(1.0825)');
+				@include vendor('transform', 'scale(2.0825)');
 				@include vendor('filter', 'blur(0.2rem)');
 			}
 		}
