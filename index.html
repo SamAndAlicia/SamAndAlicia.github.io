@@ -26,6 +26,7 @@
 							<div class="inner">
 								<h1>Sam and Alicia</h1>
 								<p>Welcome to our wedding website,<br /> We’ve created this website as a convenient and interactive way to share all of the important details with you in the lead up to our wedding.</p>
+								<h3 id="countdown"></h3>
 							</div>
 						</div>
 						<nav>
@@ -45,9 +46,75 @@
 						<!-- Intro -->
 							<article id="rsvp">
 								<h2 class="major">RSVP</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
+								<!-- Post -->
+								<section class="post">
+									<header class="major">
+										<span class="date">May 24, 2022</span>
+										<h1>RSVP Ceremony, Dinner and Evening</h1>
+									</header>
+									<p>Please fill in the follow fields to indicate if you will be able to attend and what your choice of main is.</p>
+
+								<form id="rsvp-form">
+									<div class="row gtr-uniform" style="display:block;">
+										<div class="col-12">
+											<input type="text" name="name" id="name" value="" placeholder="Name" />
+										</div>
+										<!-- Break -->
+										<div class="col-12">
+											<input type="text" name="number" id="number" value="" placeholder="Telephone number" />
+										</div>
+										<!-- Break -->
+										<div class="col-12">
+											<input type="email" name="email" id="email" value="" placeholder="Email" />
+										</div>
+										<!-- Hidden Field -->
+										<div class="col-12" hidden=true>
+											<input type="text" name="invite" id="invite" value="all day"/>
+										</div>
+										<!-- Break -->
+										<div class="col-6">
+											<select name="attending" id="attending">
+												<option value="">- Are you able to attend -</option>
+												<option value="yes">Yes</option>
+												<option value="no">No</option>
+											</select>
+										</div>
+
+										<!-- Break -->
+										<div class="col-24">
+												<select name="main_choice" id="main_choice">
+													<option value="">- Main Course -</option>
+													<option value="steak">Menu option 1</option>
+													<option value="chicken">Menu option 2</option>
+													<option value="vegetarian_risotto">Menu option 3</option>
+												</select>
+										</div>
+
+										<!-- Break -->
+										<div class="col-6">
+											<select name="dietary_requirements" id="dietary_requirements" onchange="CheckDietaryRequirements(this.value);">
+												<option value="">- Do you have any dietary requirements -</option>
+												<option value="yes">Yes</option>
+												<option value="no">No</option>
+											</select>
+										</div>
+
+										<!-- Break -->
+										<div class="col-6">
+											<input type="text" name="dietary_requirements_details" id="dietary_requirements_details" style='display:none;' value="" placeholder="Dietary requirement details" />
+										</div>
+
+										<!-- Break -->
+										<div class="col-12">
+											<textarea name="comments" id="comments" placeholder="Do you have any other comments?" rows="3"></textarea>
+										</div>
+										<div>
+											<button type="submit" id="submit-form" class="primary">Submit</button>
+										</div>
+										<div id="msg"></div>
+									</form>
+
+							</section>
 							</article>
 
 						<!-- Work -->
@@ -372,6 +439,9 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="assets/js/dietary_requirements.js"></script>
+			<script src="assets/js/countdown.js"></script>
+
 
 	</body>
 </html>
